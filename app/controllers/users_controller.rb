@@ -4,4 +4,12 @@ class UsersController < ApplicationController
   def require_resources
     @resources = User.all
   end
+
+  def require_resource
+    @resource = User.find(params[:id])
+  end
+
+  def update_resource
+    @resource.update_attributes!(user_params)
+  end
 end
