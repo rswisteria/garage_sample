@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   use_doorkeeper
+
+  scope :v1 do
+    resources :users, only: %i(index show update)
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

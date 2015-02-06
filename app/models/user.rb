@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   property :name
   property :email
 
-  def self.buld_permissions(perm, other, target)
+  def self.build_permissions(perms, other, target)
     perms.permits! :read
   end
 
